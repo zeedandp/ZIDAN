@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to ZIDAN &#8212; ZIDAN</title>
+    <title>Sistem Persamaan Linear dan Invers Matriks &#8212; ZIDAN</title>
   
   
   
@@ -57,12 +57,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="SISTEM PERSAMAAN LINEAR" href="sistempersamaanlinie.html" />
+    <link rel="prev" title="SISTEM PERSAMAAN LINEAR" href="sistempersamaanlinie.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +123,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +141,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,15 +172,15 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to ZIDAN
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="sistempersamaanlinie.html">SISTEM PERSAMAAN LINEAR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas3.html">Sistem Persamaan Linear dan Invers Matriks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sistem Persamaan Linear dan Invers Matriks</a></li>
 </ul>
 
     </div>
@@ -256,7 +252,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas3.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +282,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/tugas3.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +292,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -368,7 +364,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to ZIDAN</h1>
+    <h1>Sistem Persamaan Linear dan Invers Matriks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,15 +378,45 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-zidan">
-<h1>Welcome to ZIDAN<a class="headerlink" href="#welcome-to-zidan" title="Link to this heading">#</a></h1>
-<p>ZIDAN DIKRULLOH</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="sistempersamaanlinie.html">SISTEM PERSAMAAN LINEAR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas3.html">Sistem Persamaan Linear dan Invers Matriks</a></li>
-</ul>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linear-dan-invers-matriks">
+<h1>Sistem Persamaan Linear dan Invers Matriks<a class="headerlink" href="#sistem-persamaan-linear-dan-invers-matriks" title="Link to this heading">#</a></h1>
+<p>Misalkan kita memiliki sistem persamaan:</p>
+<p>[
+AX = B
+]</p>
+<p>dengan:</p>
+<p>[
+A =
+\begin{bmatrix}
+2 &amp; 1 &amp; -1 \
+1 &amp; 3 &amp; 2 \
+1 &amp; -1 &amp; 2
+\end{bmatrix}
+,
+B =
+\begin{bmatrix}
+1 \
+0 \
+0
+\end{bmatrix}
+]</p>
+<p>Invers dari ( A ) adalah:</p>
+<p>[
+A^{-1} =
+\begin{bmatrix}
+\frac{7}{7} &amp; \frac{-1}{7} &amp; \frac{-5}{7} \
+\frac{-1}{7} &amp; \frac{3}{7} &amp; \frac{2}{7} \
+\frac{-5}{7} &amp; \frac{2}{7} &amp; \frac{6}{7}
+\end{bmatrix}
+]</p>
+<p>[
+X = A^{-1} B =
+\begin{bmatrix}
+1 \
+0 \
+0
+\end{bmatrix}
+]</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -423,14 +449,14 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
+    <a class="left-prev"
        href="sistempersamaanlinie.html"
-       title="next page">
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">SISTEM PERSAMAAN LINEAR</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
