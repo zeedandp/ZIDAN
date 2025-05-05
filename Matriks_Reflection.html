@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SISTEM PERSAMAAN LINEAR &#8212; ZIDAN</title>
+    <title>Refleksi Titik Menggunakan Matriks Transformasi &#8212; ZIDAN</title>
   
   
   
@@ -59,11 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'sistempersamaanlinie';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Matriks_Reflection';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Sistem Persamaan Linear dan Invers Matriks" href="tugas3.html" />
-    <link rel="prev" title="Welcome to ZIDAN" href="intro.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Tugas_TransformasiMatriks.html" />
+    <link rel="prev" title="Transformasi Matriks" href="Transformasi%20matriks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,10 +182,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">SISTEM PERSAMAAN LINEAR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sistempersamaanlinie.html">SISTEM PERSAMAAN LINEAR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas3.html">Sistem Persamaan Linear dan Invers Matriks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Transformasi%20matriks.html">Transformasi Matriks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Matriks_Reflection.html">Refleksi Titik Menggunakan Matriks Transformasi</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Refleksi Titik Menggunakan Matriks Transformasi</a></li>
 </ul>
 
     </div>
@@ -257,7 +257,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsistempersamaanlinie.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMatriks_Reflection.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +287,7 @@
       
       
       
-      <li><a href="_sources/sistempersamaanlinie.md" target="_blank"
+      <li><a href="_sources/Matriks_Reflection.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -297,7 +297,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -371,7 +371,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>SISTEM PERSAMAAN LINEAR</h1>
+    <h1>Refleksi Titik Menggunakan Matriks Transformasi</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -381,15 +381,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">PENGERTIAN</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-sistem-persamaan-linier">SOLUSI SISTEM PERSAMAAN LINIER</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-eliminasi">METODE ELIMINASI</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">ELIMINASI GAUSS</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-penjelasan-solusi-atau-penyelesaian-persamaan-3-variabel-dengan-menggunakan-eliminasi-gauss-serta-menampilkan-solusinya-secara-grafis-menggunakan-geogebra">MEMBUAT PENJELASAN SOLUSI ATAU PENYELESAIAN PERSAMAAN 3 VARIABEL DENGAN MENGGUNAKAN ELIMINASI GAUSS SERTA MENAMPILKAN SOLUSINYA SECARA GRAFIS MENGGUNAKAN GEOGEBRA.</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-x">1. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-y">2. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(y\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-garis-y-x">3. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-titik-asal-origin">5. Refleksi terhadap titik asal (origin)</a></li>
 </ul>
             </nav>
         </div>
@@ -401,116 +397,219 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linear">
-<h1>SISTEM PERSAMAAN LINEAR<a class="headerlink" href="#sistem-persamaan-linear" title="Link to this heading">#</a></h1>
-<section id="pengertian">
-<h2>PENGERTIAN<a class="headerlink" href="#pengertian" title="Link to this heading">#</a></h2>
-<p>Kumpulan persamaan linear yang terdiri dari beberapa variabel. Sistem persamaan linear merupakan salah satu materi dalam ilmu matematika.</p>
-<p>Sistem persamaan linear bisa diartikan sebagai suatu persamaan aljabar. Di mana persamaan linear sendiri memiliki karakteristik pada setiap sukunya mengandung konstanta atau perkalian konstanta dengan variabel tunggal.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="refleksi-titik-menggunakan-matriks-transformasi">
+<h1>Refleksi Titik Menggunakan Matriks Transformasi<a class="headerlink" href="#refleksi-titik-menggunakan-matriks-transformasi" title="Link to this heading">#</a></h1>
+<p>Berikut adalah beberapa jenis transformasi refleksi beserta matriksnya dan contoh titik yang direfleksikan.</p>
+<hr class="docutils" />
+<section id="refleksi-terhadap-sumbu-x">
+<h2>1. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(x\)</span><a class="headerlink" href="#refleksi-terhadap-sumbu-x" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{Matriks: }
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; -1
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= (2, 3) \Rightarrow A' = (2, -3) \\
+B &amp;= (-1, 4) \Rightarrow B' = (-1, -4)
+\end{aligned}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">IFrame</span>
+
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.geogebra.org/calculator/pgpftyjk&quot;</span>  <span class="c1"># Ganti dengan URL GeoGebra yang valid</span>
+
+
+<span class="n">IFrame</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="600"
+            src="https://www.geogebra.org/calculator/pgpftyjk"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
 </section>
-<section id="solusi-sistem-persamaan-linier">
-<h2>SOLUSI SISTEM PERSAMAAN LINIER<a class="headerlink" href="#solusi-sistem-persamaan-linier" title="Link to this heading">#</a></h2>
-<section id="metode-eliminasi">
-<h3>METODE ELIMINASI<a class="headerlink" href="#metode-eliminasi" title="Link to this heading">#</a></h3>
-<p>Metode eliminasi adalah salah satu metode yang digunakan untuk menyelesaikan soal persamaan linear dua atau tiga variabel. Di mana metode eliminasi secara garis besar akan menghapus atau menghilangkan satu variabel dalam persamaan tersebut.</p>
-<section id="eliminasi-gauss">
-<h4>ELIMINASI GAUSS<a class="headerlink" href="#eliminasi-gauss" title="Link to this heading">#</a></h4>
-<p>Sistem persamaan linear yang diubah menjadi bentuk matriks, matriks tersebut lalu diubah ke bentuk Eselon Baris melalui Operasi Baris Elementer. Kemudian sistem diselesaikan dengan substitusi balik.</p>
+<section id="refleksi-terhadap-sumbu-y">
+<h2>2. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(y\)</span><a class="headerlink" href="#refleksi-terhadap-sumbu-y" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{Matriks: }
+\begin{bmatrix}
+-1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= (2, 3) \Rightarrow A' = (-2, 3) \\
+B &amp;= (-1, 4) \Rightarrow B' = (1, 4)
+\end{aligned}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">IFrame</span>
+
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.geogebra.org/calculator/t5hnnkjz&quot;</span>  <span class="c1"># Ganti dengan URL GeoGebra yang valid</span>
+
+
+<span class="n">IFrame</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="600"
+            src="https://www.geogebra.org/calculator/t5hnnkjz"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
 </section>
-<section id="membuat-penjelasan-solusi-atau-penyelesaian-persamaan-3-variabel-dengan-menggunakan-eliminasi-gauss-serta-menampilkan-solusinya-secara-grafis-menggunakan-geogebra">
-<h4>MEMBUAT PENJELASAN SOLUSI ATAU PENYELESAIAN PERSAMAAN 3 VARIABEL DENGAN MENGGUNAKAN ELIMINASI GAUSS SERTA MENAMPILKAN SOLUSINYA SECARA GRAFIS MENGGUNAKAN GEOGEBRA.<a class="headerlink" href="#membuat-penjelasan-solusi-atau-penyelesaian-persamaan-3-variabel-dengan-menggunakan-eliminasi-gauss-serta-menampilkan-solusinya-secara-grafis-menggunakan-geogebra" title="Link to this heading">#</a></h4>
-<p>Selesaikan sistem persamaan linier berikut:</p>
+<section id="refleksi-terhadap-garis-y-x">
+<h2>3. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = x\)</span><a class="headerlink" href="#refleksi-terhadap-garis-y-x" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases} x + y + z = 6 \\ 2x + 2y + 3z = 14 \\ 3x + 4y + 2z = 13 \end{cases}\end{split}\]</div>
-<p>Berikut adalah langkah-langkah menyelesaikan sistem persamaan linear di atas menggunakan metode eliminasi Gauss.</p>
-<ol class="arabic">
-<li><p><strong>Langkah pertama</strong></p>
-<p>Hasil Matriksnya:</p>
+\[\begin{split}
+\text{Matriks: }
+\begin{bmatrix}
+0 &amp; 1 \\
+1 &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; | 6 \\ 2 &amp; 2 &amp; 3 &amp; | 14 \\ 3 &amp; 4 &amp; 2 &amp; | 13 \end{bmatrix}\end{split}\]</div>
-</li>
-<li><p><strong>Langkah kedua</strong></p>
-<ul class="simple">
-<li><p>Jadikan elemen pivot pertama (baris 1, kolom 1) bernilai 1.</p></li>
-<li><p>Jika sudah bernilai 1, tidak perlu diubah.</p></li>
-<li><p>Nol-kan elemen di bawah elemen pivot pertama.</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[ R_2 \to R_2 - 2R_1 \]</div>
-<p>Hasil matriksnya:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; | 6 \\ 0 &amp; 0 &amp; 1 &amp; | 2 \\ 3 &amp; 4 &amp; 2 &amp; | 13 \end{bmatrix}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[ R_3 \to R_3 - 3R_1 \]</div>
-<p>Hasil matriksnya:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; | 6 \\ 0 &amp; 0 &amp; 1 &amp; | 2 \\ 0 &amp; 1 &amp; -1 &amp; | -5 \end{bmatrix}\end{split}\]</div>
-<ul class="simple">
-<li><p>Jadikan elemen pivot kedua (baris 2, kolom 2) bernilai 1:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[ R_2 \to R_2 + R_3 \]</div>
-<p>Hasil matriksnya:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; | 6 \\ 0 &amp; 1 &amp; 0 &amp; | -3 \\ 0 &amp; 1 &amp; -1 &amp; | -5 \end{bmatrix}\end{split}\]</div>
-<ul class="simple">
-<li><p>Nol-kan elemen di bawah elemen pivot kedua:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[ R_3 \to R_3 - R_2 \]</div>
-<p>Hasil matriksnya:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; | 6 \\ 0 &amp; 1 &amp; 0 &amp; | -3 \\ 0 &amp; 0 &amp; -1 &amp; | -2 \end{bmatrix}\end{split}\]</div>
-<ul class="simple">
-<li><p>Jadikan elemen pivot ketiga (baris 3, kolom 3) bernilai 1:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[ R_3 \to R_3 \cdot (-1) \]</div>
-<p>Hasil matriksnya:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; | 6 \\ 0 &amp; 1 &amp; 0 &amp; | -3 \\ 0 &amp; 0 &amp; 1 &amp; | 2 \end{bmatrix}\end{split}\]</div>
-</li>
-<li><p><strong>Langkah ketiga: substitusi balik</strong></p>
-<ul>
-<li><p>Dari baris terakhir:</p>
-<div class="math notranslate nohighlight">
-\[ z = 2 \]</div>
-</li>
-<li><p>Substitusi ( z ) ke baris kedua:</p>
-<div class="math notranslate nohighlight">
-\[ y + z = -3 \]</div>
-<div class="math notranslate nohighlight">
-\[ y + 2 = -3 \]</div>
-<div class="math notranslate nohighlight">
-\[ y = -3 - 2 \]</div>
-<div class="math notranslate nohighlight">
-\[ y = -5 \]</div>
-</li>
-<li><p>Substitusi ( y ) dan ( z ) ke baris pertama:</p>
-<div class="math notranslate nohighlight">
-\[ x + y + z = 6 \]</div>
-<div class="math notranslate nohighlight">
-\[ x + (-5) + 2 = 6 \]</div>
-<div class="math notranslate nohighlight">
-\[ x - 5 + 2 = 6 \]</div>
-<div class="math notranslate nohighlight">
-\[ x - 3 = 6 \]</div>
-<div class="math notranslate nohighlight">
-\[ x = 6 + 3 \]</div>
-<div class="math notranslate nohighlight">
-\[ x = 9 \]</div>
-</li>
-<li><p><strong>Solusi akhir:</strong></p>
-<div class="math notranslate nohighlight">
-\[ x = 9, \quad y = -5, \quad z = 2 \]</div>
-</li>
-</ul>
-</li>
-</ol>
-<p><img alt="Screenshot 2025-03-03 204248" src="https://hackmd.io/_uploads/HkgfQVXoyl.png" /></p>
-<p><a class="reference external" href="https://">https://www.geogebra.org/classic/bt2sr3ar</a></p>
+\[\begin{split}
+\begin{aligned}
+A &amp;= (2, 3) \Rightarrow A' = (3, 2) \\
+B &amp;= (-1, 4) \Rightarrow B' = (4, -1)
+\end{aligned}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">IFrame</span>
+
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.geogebra.org/calculator/xtfx88zp&quot;</span>  <span class="c1"># Ganti dengan URL GeoGebra yang valid</span>
+
+
+<span class="n">IFrame</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="600"
+            src="https://www.geogebra.org/calculator/xtfx88zp"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
 </section>
+<section id="id1">
+<h2>4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{Matriks: }
+\begin{bmatrix}
+0 &amp; -1 \\
+-1 &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= (2, 3) \Rightarrow A' = (-3, -2) \\
+B &amp;= (-1, 4) \Rightarrow B' = (-4, 1)
+\end{aligned}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">IFrame</span>
+
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.geogebra.org/calculator/qzbvcrhv&quot;</span>  <span class="c1"># Ganti dengan URL GeoGebra yang valid</span>
+
+
+<span class="n">IFrame</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="600"
+            src="https://www.geogebra.org/calculator/qzbvcrhv"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
 </section>
+<section id="refleksi-terhadap-titik-asal-origin">
+<h2>5. Refleksi terhadap titik asal (origin)<a class="headerlink" href="#refleksi-terhadap-titik-asal-origin" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{Matriks: }
+\begin{bmatrix}
+-1 &amp; 0 \\
+0 &amp; -1
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= (2, 3) \Rightarrow A' = (-2, -3) \\
+B &amp;= (-1, 4) \Rightarrow B' = (1, -4)
+\end{aligned}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">IFrame</span>
+
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.geogebra.org/calculator/qzbvcrhv&quot;</span>  <span class="c1"># Ganti dengan URL GeoGebra yang valid</span>
+
+
+<span class="n">IFrame</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="600"
+            src="https://www.geogebra.org/calculator/qzbvcrhv"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
 </section>
 </section>
 
@@ -545,20 +644,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="Transformasi%20matriks.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to ZIDAN</p>
+        <p class="prev-next-title">Transformasi Matriks</p>
       </div>
     </a>
     <a class="right-next"
-       href="tugas3.html"
+       href="Tugas_TransformasiMatriks.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Sistem Persamaan Linear dan Invers Matriks</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -578,15 +677,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">PENGERTIAN</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-sistem-persamaan-linier">SOLUSI SISTEM PERSAMAAN LINIER</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-eliminasi">METODE ELIMINASI</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">ELIMINASI GAUSS</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-penjelasan-solusi-atau-penyelesaian-persamaan-3-variabel-dengan-menggunakan-eliminasi-gauss-serta-menampilkan-solusinya-secara-grafis-menggunakan-geogebra">MEMBUAT PENJELASAN SOLUSI ATAU PENYELESAIAN PERSAMAAN 3 VARIABEL DENGAN MENGGUNAKAN ELIMINASI GAUSS SERTA MENAMPILKAN SOLUSINYA SECARA GRAFIS MENGGUNAKAN GEOGEBRA.</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-x">1. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-y">2. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(y\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-garis-y-x">3. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-titik-asal-origin">5. Refleksi terhadap titik asal (origin)</a></li>
 </ul>
   </nav></div>
 
