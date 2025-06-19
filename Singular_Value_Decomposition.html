@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; ZIDAN</title>
+    <title>Singular Value Decomposition (SVD) &#8212; ZIDAN</title>
   
   
   
@@ -59,11 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas_TransformasiMatriks1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Singular_Value_Decomposition';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Refleksi" href="Refleksi.html" />
-    <link rel="prev" title="Refleksi Titik Menggunakan Matriks Transformasi" href="Matriks_Reflection.html" />
+    <link rel="prev" title="PERKALIAN SILANG (CROSS PRODUCT)" href="cross_product.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,7 +180,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="sistempersamaanlinie.html">SISTEM PERSAMAAN LINEAR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas3.html">Sistem Persamaan Linear dan Invers Matriks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Transformasi%20matriks.html">Transformasi Matriks</a></li>
@@ -195,7 +194,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="cross_product.html">PERKALIAN SILANG (CROSS PRODUCT)</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="Singular_Value_Decomposition.html">Singular Value Decomposition (SVD)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Singular Value Decomposition (SVD)</a></li>
 </ul>
 
     </div>
@@ -267,7 +266,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTugas_TransformasiMatriks1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FSingular_Value_Decomposition.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -297,7 +296,7 @@
       
       
       
-      <li><a href="_sources/Tugas_TransformasiMatriks1.ipynb" target="_blank"
+      <li><a href="_sources/Singular_Value_Decomposition.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -381,7 +380,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Singular Value Decomposition (SVD)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -390,9 +389,15 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-svd">1. Apa itu SVD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kegunaan-svd">2. Kegunaan SVD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formula-svd">3. Formula SVD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal">4. Contoh Soal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian">Penyelesaian:</a></li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -403,42 +408,102 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p><strong>Bukti bahwa</strong> ( T(v_1, v_2) = (v_1 + v_2, v_1) ) <strong>adalah transformasi linier</strong></p>
-<p><strong>Syarat transformasi linier:</strong>
-\begin{align*}
-(1) \quad &amp; T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v}) \
-(2) \quad &amp; T(c\mathbf{u}) = cT(\mathbf{u})
-\end{align*}</p>
-<p><strong>Misalkan:</strong><br />
-$<span class="math notranslate nohighlight">\(
-\mathbf{u} = (u_1, u_2), \quad \mathbf{v} = (v_1, v_2), \quad c \in \mathbb{R}
-\)</span>$</p>
-<hr class="docutils" />
-<p><strong>Periksa syarat (1):</strong></p>
-<p>\begin{align*}
-T(\mathbf{u} + \mathbf{v}) &amp;= T((u_1 + v_1, u_2 + v_2)) \
-&amp;= ((u_1 + v_1) + (u_2 + v_2), u_1 + v_1) \
-&amp;= (u_1 + u_2 + v_1 + v_2, u_1 + v_1)
-\end{align*}</p>
-<p>\begin{align*}
-T(\mathbf{u}) + T(\mathbf{v}) &amp;= (u_1 + u_2, u_1) + (v_1 + v_2, v_1) \
-&amp;= (u_1 + u_2 + v_1 + v_2, u_1 + v_1)
-\end{align*}</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="singular-value-decomposition-svd">
+<h1>Singular Value Decomposition (SVD)<a class="headerlink" href="#singular-value-decomposition-svd" title="Link to this heading">#</a></h1>
+<section id="apa-itu-svd">
+<h2>1. Apa itu SVD<a class="headerlink" href="#apa-itu-svd" title="Link to this heading">#</a></h2>
+<p>Singular Value Decomposition (SVD) adalah metode dalam aljabar linier yang digunakan untuk memecah sebuah matriks menjadi tiga bagian penting.</p>
+<p>Untuk sebuah matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m \times n\)</span>, SVD menyatakan bahwa:</p>
 <div class="math notranslate nohighlight">
 \[
-\Rightarrow T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v}) \quad \text{(✓)}
+A = U \Sigma V^T
 \]</div>
+<p>Dimana:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(U\)</span> adalah matriks ortogonal berukuran <span class="math notranslate nohighlight">\(m \times m\)</span>, berisi <strong>left singular vectors</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Sigma\)</span> adalah matriks diagonal berukuran <span class="math notranslate nohighlight">\(m \times n\)</span>, berisi <strong>singular values</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(V^T\)</span> adalah transpos dari matriks ortogonal <span class="math notranslate nohighlight">\(V\)</span> berukuran <span class="math notranslate nohighlight">\(n \times n\)</span>, berisi <strong>right singular vectors</strong>.</p></li>
+</ul>
+</section>
 <hr class="docutils" />
-<p><strong>Periksa syarat (2):</strong></p>
-<p>\begin{align*}
-T(c\mathbf{u}) &amp;= T((cu_1, cu_2)) \
-&amp;= (cu_1 + cu_2, cu_1) \
-&amp;= c(u_1 + u_2, u_1) \
-&amp;= cT(\mathbf{u}) \quad \text{(✓)}
-\end{align*}</p>
+<section id="kegunaan-svd">
+<h2>2. Kegunaan SVD<a class="headerlink" href="#kegunaan-svd" title="Link to this heading">#</a></h2>
+<p>SVD banyak digunakan di berbagai bidang, seperti:</p>
+<ul class="simple">
+<li><p><strong>Reduksi Dimensi</strong>: digunakan dalam PCA (Principal Component Analysis).</p></li>
+<li><p><strong>Kompresi Gambar</strong>: menyimpan citra dengan ukuran lebih kecil tanpa kehilangan banyak informasi.</p></li>
+<li><p><strong>Sistem Rekomendasi</strong>: seperti Netflix dan Spotify, untuk prediksi preferensi pengguna.</p></li>
+<li><p><strong>Penyelesaian Sistem Persamaan Linier</strong>: terutama jika sistem tidak memiliki solusi eksak atau banyak solusi.</p></li>
+<li><p><strong>Deteksi Pola / Penghilangan Noise</strong> dalam data.</p></li>
+</ul>
+</section>
 <hr class="docutils" />
-<p><strong>Kesimpulan:</strong><br />
-( T ) adalah transformasi linier.</p>
+<section id="formula-svd">
+<h2>3. Formula SVD<a class="headerlink" href="#formula-svd" title="Link to this heading">#</a></h2>
+<p>Secara umum, jika <span class="math notranslate nohighlight">\(A\)</span> adalah matriks <span class="math notranslate nohighlight">\(m \times n\)</span>, maka:</p>
+<div class="math notranslate nohighlight">
+\[
+A = U \Sigma V^T
+\]</div>
+<p>Dengan:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(U = [\vec{u}_1, \vec{u}_2, \dots, \vec{u}_m]\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Sigma = \text{diag}(\sigma_1, \sigma_2, \dots, \sigma_r)\)</span>, dengan <span class="math notranslate nohighlight">\(\sigma_1 \geq \sigma_2 \geq \dots \geq \sigma_r &gt; 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V = [\vec{v}_1, \vec{v}_2, \dots, \vec{v}_n]\)</span></p></li>
+</ul>
+<p>Maka matriks <span class="math notranslate nohighlight">\(A\)</span> dapat direkonstruksi dari:</p>
+<div class="math notranslate nohighlight">
+\[
+A = \sum_{i=1}^{r} \sigma_i \vec{u}_i \vec{v}_i^T
+\]</div>
+<p>Dimana <span class="math notranslate nohighlight">\(r\)</span> adalah rank dari matriks <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</section>
+<hr class="docutils" />
+<section id="contoh-soal">
+<h2>4. Contoh Soal<a class="headerlink" href="#contoh-soal" title="Link to this heading">#</a></h2>
+<p>Misalkan diketahui matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix}
+3 &amp; 1 \\
+1 &amp; 3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Lakukan dekomposisi SVD dari matriks tersebut.</p>
+<section id="penyelesaian">
+<h3>Penyelesaian:<a class="headerlink" href="#penyelesaian" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+U = \begin{bmatrix}
+\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}}
+\end{bmatrix}, \quad
+\Sigma = \begin{bmatrix}
+4 &amp; 0 \\
+0 &amp; 2
+\end{bmatrix}, \quad
+V^T = \begin{bmatrix}
+\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}}
+\end{bmatrix}
+\end{split}\]</div>
+<p>Rekonstruksi kembali matriks <span class="math notranslate nohighlight">\(A\)</span> dengan:</p>
+<div class="math notranslate nohighlight">
+\[
+A = U \Sigma V^T
+\]</div>
+<p>Hasilnya akan mendekati matriks semula:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A \approx \begin{bmatrix}
+3 &amp; 1 \\
+1 &amp; 3
+\end{bmatrix}
+\end{split}\]</div>
+<hr class="docutils" />
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -471,22 +536,13 @@ T(c\mathbf{u}) &amp;= T((cu_1, cu_2)) \
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Matriks_Reflection.html"
+       href="cross_product.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Refleksi Titik Menggunakan Matriks Transformasi</p>
+        <p class="prev-next-title">PERKALIAN SILANG (CROSS PRODUCT)</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="Refleksi.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Refleksi</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -503,9 +559,15 @@ T(c\mathbf{u}) &amp;= T((cu_1, cu_2)) \
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-svd">1. Apa itu SVD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kegunaan-svd">2. Kegunaan SVD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formula-svd">3. Formula SVD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal">4. Contoh Soal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian">Penyelesaian:</a></li>
 </ul>
-
+</li>
+</ul>
   </nav></div>
 
 </div></div>

@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'cross_product';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Singular Value Decomposition (SVD)" href="Singular_Value_Decomposition.html" />
     <link rel="prev" title="Dot Product (Hasil Skalar)" href="dot_product.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -193,6 +194,8 @@
 <li class="toctree-l1"><a class="reference internal" href="dot_product.html">Dot Product (Hasil Skalar)</a></li>
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">PERKALIAN SILANG (CROSS PRODUCT)</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Singular_Value_Decomposition.html">Singular Value Decomposition (SVD)</a></li>
 </ul>
 
     </div>
@@ -388,6 +391,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">PERKALIAN SILANG (CROSS PRODUCT)</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-hasil-kali-silang"><em><strong>DEFINISI HASIL KALI SILANG</strong></em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menggunakan-determinan-untuk-menemukan-perkalian-silang"><em><strong>MENGGUNAKAN DETERMINAN UNTUK MENEMUKAN PERKALIAN SILANG</strong></em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-perkalian-silang">Contoh Soal Perkalian Silang</a><ul class="nav section-nav flex-column">
@@ -405,6 +409,16 @@ document.write(`
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1-luas-jajaran-genjang-dan-segitiga-cross-product">Soal 1: Luas Jajaran Genjang dan Segitiga (Cross Product)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-jajaran-genjang-dari-vec-u-begin-bmatrix-1-2-end-bmatrix-dan-vec-v-begin-bmatrix-2-1-end-bmatrix">1. Luas jajaran genjang dari <span class="math notranslate nohighlight">\(\vec{u} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-jajaran-genjang-dari-vec-u-begin-bmatrix-2-0-end-bmatrix-dan-vec-v-begin-bmatrix-0-3-end-bmatrix">2. Luas jajaran genjang dari <span class="math notranslate nohighlight">\(\vec{u} = \begin{bmatrix} 2 \\ 0 \end{bmatrix}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-segitiga-dengan-titik-titik-sudut-0-0-0-1-3-1-2-1-1">3. Luas segitiga dengan titik-titik sudut: <span class="math notranslate nohighlight">\((0, 0, 0),\ (1, 3, -1),\ (2, 1, 1)\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-segitiga-dengan-titik-titik-sudut-5-2-1-3-6-2-1-0-4">4. Luas segitiga dengan titik-titik sudut: <span class="math notranslate nohighlight">\((5,2,-1),\ (3,6,2),\ (1,0,4)\)</span></a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -626,6 +640,97 @@ $<span class="math notranslate nohighlight">\(
 </section>
 </section>
 </section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="soal-1-luas-jajaran-genjang-dan-segitiga-cross-product">
+<h1>Soal 1: Luas Jajaran Genjang dan Segitiga (Cross Product)<a class="headerlink" href="#soal-1-luas-jajaran-genjang-dan-segitiga-cross-product" title="Link to this heading">#</a></h1>
+<section id="luas-jajaran-genjang-dari-vec-u-begin-bmatrix-1-2-end-bmatrix-dan-vec-v-begin-bmatrix-2-1-end-bmatrix">
+<h2>1. Luas jajaran genjang dari <span class="math notranslate nohighlight">\(\vec{u} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}\)</span><a class="headerlink" href="#luas-jajaran-genjang-dari-vec-u-begin-bmatrix-1-2-end-bmatrix-dan-vec-v-begin-bmatrix-2-1-end-bmatrix" title="Link to this heading">#</a></h2>
+<p>Untuk vektor 2 dimensi, gunakan rumus:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Luas} = |u_1 v_2 - u_2 v_1|
+\]</div>
+<p>Substitusi:</p>
+<div class="math notranslate nohighlight">
+\[
+= |1 \cdot 1 - 2 \cdot 2| = |1 - 4| = |-3| = \boxed{3}
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="luas-jajaran-genjang-dari-vec-u-begin-bmatrix-2-0-end-bmatrix-dan-vec-v-begin-bmatrix-0-3-end-bmatrix">
+<h2>2. Luas jajaran genjang dari <span class="math notranslate nohighlight">\(\vec{u} = \begin{bmatrix} 2 \\ 0 \end{bmatrix}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}\)</span><a class="headerlink" href="#luas-jajaran-genjang-dari-vec-u-begin-bmatrix-2-0-end-bmatrix-dan-vec-v-begin-bmatrix-0-3-end-bmatrix" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+= |2 \cdot 3 - 0 \cdot 0| = |6| = \boxed{6}
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="luas-segitiga-dengan-titik-titik-sudut-0-0-0-1-3-1-2-1-1">
+<h2>3. Luas segitiga dengan titik-titik sudut: <span class="math notranslate nohighlight">\((0, 0, 0),\ (1, 3, -1),\ (2, 1, 1)\)</span><a class="headerlink" href="#luas-segitiga-dengan-titik-titik-sudut-0-0-0-1-3-1-2-1-1" title="Link to this heading">#</a></h2>
+<p>Vektor-vektor:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{u} = (1, 3, -1) - (0, 0, 0) = (1, 3, -1)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\vec{v} = (2, 1, 1) - (0, 0, 0) = (2, 1, 1)
+\]</div>
+<p>Hitung <span class="math notranslate nohighlight">\(\vec{u} \times \vec{v}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+1 &amp; 3 &amp; -1 \\
+2 &amp; 1 &amp; 1
+\end{vmatrix}
+= \hat{i}(3 \cdot 1 - (-1) \cdot 1) - \hat{j}(1 \cdot 1 - (-1) \cdot 2) + \hat{k}(1 \cdot 1 - 3 \cdot 2)
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+= 4\hat{i} - 3\hat{j} - 5\hat{k}
+\]</div>
+<p>Luas segitiga:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Luas} = \frac{1}{2} \left\| \vec{u} \times \vec{v} \right\| = \frac{1}{2} \sqrt{4^2 + (-3)^2 + (-5)^2} = \frac{1}{2} \sqrt{50} = \boxed{\frac{\sqrt{50}}{2}}
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="luas-segitiga-dengan-titik-titik-sudut-5-2-1-3-6-2-1-0-4">
+<h2>4. Luas segitiga dengan titik-titik sudut: <span class="math notranslate nohighlight">\((5,2,-1),\ (3,6,2),\ (1,0,4)\)</span><a class="headerlink" href="#luas-segitiga-dengan-titik-titik-sudut-5-2-1-3-6-2-1-0-4" title="Link to this heading">#</a></h2>
+<p>Vektor-vektor:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{u} = (3, 6, 2) - (5, 2, -1) = (-2, 4, 3)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\vec{v} = (1, 0, 4) - (5, 2, -1) = (-4, -2, 5)
+\]</div>
+<p>Hitung <span class="math notranslate nohighlight">\(\vec{u} \times \vec{v}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+-2 &amp; 4 &amp; 3 \\
+-4 &amp; -2 &amp; 5
+\end{vmatrix}
+= \hat{i}(4 \cdot 5 - 3 \cdot (-2)) - \hat{j}(-2 \cdot 5 - 3 \cdot (-4)) + \hat{k}(-2 \cdot (-2) - 4 \cdot (-4))
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+= 26\hat{i} - 2\hat{j} + 20\hat{k}
+\]</div>
+<p>Luas segitiga:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Luas} = \frac{1}{2} \left\| \vec{u} \times \vec{v} \right\| = \frac{1}{2} \sqrt{26^2 + (-2)^2 + 20^2} = \frac{1}{2} \sqrt{1080} = \boxed{\frac{\sqrt{1080}}{2}}
+\]</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -666,6 +771,15 @@ $<span class="math notranslate nohighlight">\(
         <p class="prev-next-title">Dot Product (Hasil Skalar)</p>
       </div>
     </a>
+    <a class="right-next"
+       href="Singular_Value_Decomposition.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Singular Value Decomposition (SVD)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -682,6 +796,7 @@ $<span class="math notranslate nohighlight">\(
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">PERKALIAN SILANG (CROSS PRODUCT)</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-hasil-kali-silang"><em><strong>DEFINISI HASIL KALI SILANG</strong></em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menggunakan-determinan-untuk-menemukan-perkalian-silang"><em><strong>MENGGUNAKAN DETERMINAN UNTUK MENEMUKAN PERKALIAN SILANG</strong></em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-perkalian-silang">Contoh Soal Perkalian Silang</a><ul class="nav section-nav flex-column">
@@ -699,6 +814,16 @@ $<span class="math notranslate nohighlight">\(
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1-luas-jajaran-genjang-dan-segitiga-cross-product">Soal 1: Luas Jajaran Genjang dan Segitiga (Cross Product)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-jajaran-genjang-dari-vec-u-begin-bmatrix-1-2-end-bmatrix-dan-vec-v-begin-bmatrix-2-1-end-bmatrix">1. Luas jajaran genjang dari <span class="math notranslate nohighlight">\(\vec{u} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-jajaran-genjang-dari-vec-u-begin-bmatrix-2-0-end-bmatrix-dan-vec-v-begin-bmatrix-0-3-end-bmatrix">2. Luas jajaran genjang dari <span class="math notranslate nohighlight">\(\vec{u} = \begin{bmatrix} 2 \\ 0 \end{bmatrix}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-segitiga-dengan-titik-titik-sudut-0-0-0-1-3-1-2-1-1">3. Luas segitiga dengan titik-titik sudut: <span class="math notranslate nohighlight">\((0, 0, 0),\ (1, 3, -1),\ (2, 1, 1)\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-segitiga-dengan-titik-titik-sudut-5-2-1-3-6-2-1-0-4">4. Luas segitiga dengan titik-titik sudut: <span class="math notranslate nohighlight">\((5,2,-1),\ (3,6,2),\ (1,0,4)\)</span></a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
